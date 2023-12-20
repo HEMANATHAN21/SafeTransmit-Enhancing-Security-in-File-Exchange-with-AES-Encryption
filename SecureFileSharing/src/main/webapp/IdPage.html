@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReeryYIAE6zYYxUDvKznYa9dWVRdLx711GDw&usqp=CAU")
+                center/cover no-repeat fixed;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+            transition: color 0.3s; 
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #444;
+            transition: border-color 0.3s; 
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50; 
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            cursor: pointer;
+            background-color: rgb(128, 255, 255);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+<form action="seckeyinp" method="get">
+	<label>Enter Customer Secret Key To Download PDF : </label>
+	<input type="text" name="secretKey" placeholder="Enter Key" required><br>
+	<br>
+	<input type="submit"  value="Download Pdf">
+</form>
+
+<iframe name="pdfFrame" width="100%" height="800px"></iframe>
+
+</body>
+</html>
